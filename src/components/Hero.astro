@@ -1,3 +1,8 @@
+---
+import Form from "./Form.astro";
+
+---
+
 <section
   class="w-screen flex justify-center items-center bg-revolver-800"
   id="home"
@@ -9,14 +14,17 @@
       <div
         class="text-customSecondary text-sm sm:text-base mb-6 sm:mt-32 mt-16 font-bold"
       >
-        !Bienvenido al curso¡
+        ¡Bienvenido al curso!
       </div>
     </div>
     <div>
       <div
         class="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide text-white px-8 sm:px-8 md:px-20 lg:px-4"
       >
-        Fundamentos de <span class="text-transparent bg-gradient-to-r from-fuchsia-300 via-revolver-100 to-blue-700 bg-clip-text">Typescript</span>
+        Fundamentos de <span
+          class="text-transparent bg-gradient-to-r from-fuchsia-300 via-revolver-100 to-blue-700 bg-clip-text"
+          >Typescript</span
+        >
       </div>
     </div>
     <div>
@@ -31,61 +39,7 @@
         progreso como programador.
       </div>
     </div>
-    <div>
-      <div class="flex flex-col gap-2  mt-14 mb-14 justify-center">
-        <div class="flex flex-col items-center py-8 text-center">
-          <h2
-            class="max-w-screen-md px-8 py-8 text-3xl font-bold text-gray-100 lg:text-5xl md:text-5xl drop-shadow-lg lg:max-w-screen-lg"
-          >
-            Fortalece tus
-            <span
-              class="text-transparent bg-gradient-to-r from-fuchsia-300 via-revolver-100 to-blue-700 bg-clip-text"
-              > conocimientos de TypeScript</span
-            >
-          </h2><h3 class="max-w-md pt-2 text-xl text-blue-200 opacity-90">
-            Comienza el curso gratuito suscribiendote ahora.
-          </h3>
-        </div>
-        <form data-sr-convertkit-subscribe-form="" class="w-full mx-auto max-w-prose pt-2">
-          <div data-sr-input-wrapper="true">
-            <label data-sr-input-label="true" for="first_name" class="absolute w-1 h-1 p-0 -m-1 overflow-hidden whitespace-nowrap border-0">First Name</label
-            ><input
-              data-sr-input="true"
-              name="first_name"
-              id="first_name"
-              placeholder="Preferred name"
-              type="text"
-              class="backdrop-blur w-full mb-1 rounded bg-gray-800 py-4 px-4 font-normal shadow-md"
-            />
-          </div><div data-sr-input-wrapper="true">
-            <label data-sr-input-label="true" for="email"
-              >Email<abbr title="required" data-sr-input-asterisk="true">*</abbr
-              ></label
-            ><input
-              data-sr-input="true"
-              name="email"
-              id="email"
-              placeholder="you@example.com"
-              type="email"
-              class="backdrop-blur w-full mb-1 rounded bg-gray-800 py-4 px-4 font-normal shadow-md"
-              required=""
-            />
-          </div>
-
-          <button
-            data-sr-button="true"
-            class="relative flex items-center justify-center overflow-hidden my-1 w-full rounded-md p-4 mt-4 font-medium text-xl text-gray-100 shadow-md bg-gradient-to-r from-fuchsia-400 to-blue-700"
-            type="submit"
-            ><span class="relative z-10">Obten tu acceso ahora</span><div
-              aria-hidden="true"
-              class="absolute top-0 left-0 items-center justify-center w-full h-full space-x-1 tracking-wide uppercase bg-white pointer-events-none bg-opacity-10 bg-blend-overlay"
-              style="background: linear-gradient(to right, rgba(132, 171, 255, 0) 100%, rgb(132, 171, 255) 200%, rgba(132, 171, 255, 0) 200%);"
-            >
-            </div>
-          </button>
-        </form>
-      </div>
-    </div>
+    <Form />
     <div>
       <div
         class="text-customGrayText text-sm lg:text-base xl:text-lg sm:text-base mb-20 px-12 sm:px-48 flex flex-row items-center gap-8"
@@ -93,9 +47,13 @@
         <img
           src="https://res.cloudinary.com/matiasfha/image/fetch/f_auto,q_auto,w_100/r_max/https://matiashernandez.dev/me-optimized.png"
           alt="me"
+          class="u-photo"
         />
         <span
-          >Escrito y diseñado por <a href="https://matiashernandez.dev">
+          >Escrito y diseñado por <a
+            href="https://matiashernandez.dev"
+            class="p-note"
+          >
             Matias Hernández</a
           ></span
         >

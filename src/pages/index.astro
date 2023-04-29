@@ -3,230 +3,26 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Navbar from "../components/Navbar.astro";
 import Features1 from "../components/Features1.astro";
-import Features2 from "../components/Features2.astro";
+import CourseDescription from "../components/CourseDescription.astro";
 import Testimonials from "../components/Testimonials.astro";
-import FeaturesDiagonal from "../components/FeaturesDiagonal.astro";
 import { FAQ } from "../components/FAQ";
 import Footer from "../components/Footer.astro";
 import { ScrollUpButton } from "../components/ScrollUpButton";
 import "../styles/Theme.css";
 import "../styles/Diagonals.css";
+import About from "../components/About.astro";
+import Form from "../components/Form.astro";
 ---
 
 <Layout title="Fundamentos de Typescript">
   <Navbar />
   <Hero />
-  <section class="w-full bg-gradient-to-b from-revolver-800 to-revolver-600">
-    <div class="prose prose-lg mx-auto text-customGrayText py-16">
-      <p>
-        En este curso, te llevaremos en un viaje desde los fundamentos de
-        Typescript hasta su aplicación en el mundo real. A lo largo del curso,
-        aprenderás cómo mejorar la calidad de tus desarrollos y ahorrar tiempo
-        en la detección de errores utilizando el tipado de variables, la
-        prevención de errores en tiempo de ejecución y la mejora de la
-        escalabilidad y legibilidad del código.
-      </p>
-      <p>
-        El curso incluye cuatro semanas de contenido y cuatro horas de
-        dedicación por semana. Todos los materiales están disponibles en línea,
-        lo que permite un aprendizaje autónomo y personalizado.
-      </p>
-      <p>
-        ¡No importa si eres un programador experimentado o un principiante en el
-        campo del desarrollo de software, nuestro curso está diseñado para
-        adaptarse a tus necesidades y conocimientos previos!
-      </p>
-    </div>
-  </section>
+  <CourseDescription />
   <Features1 />
-  <Features2 />
-  <section
-    class="w-full bg-gradient-to-b from-revolver-500 to-revolver-700 py-12"
-  >
-    <div class="prose prose-lg mx-auto text-customGrayText">
-      <img
-        src="https://res.cloudinary.com/matiasfha/image/fetch/f_auto,q_auto,w_200/r_max/https://matiashernandez.dev/me-optimized.png"
-        alt="me"
-        class="mx-auto"
-      />
-      <p>
-        Soy Matías Hernández, instructor y desarrollador de software con más de
-        12 de experiencia. Me apasiona ubicar problemas y encontrar soluciones y
-        he trabajado en múltiples proyectos con tecnologías de punta. Estoy
-        comprometido a ayudar a los estudiantes a alcanzar sus objetivos de
-        aprendizaje y mejorar sus habilidades como programador.
-      </p>
-    </div>
-  </section>
-  <section class="mx-full mx-auto bg-gradient-to-b from-revolver-700 to-revolver-900 py-12">
-    <h2 class="text-2xl text-gray-100 text-center py-8">
-      Encuentra algo del material sobre typescript que he publicado
-    </h2>
-    <div
-      class="grid md:grid-cols-3 grid-cols-1 md:gap-16 gap-8 transition duration-150 ease-in-out w-3/4 mx-auto"
-    >
-      <div class="flex flex-col">
-        <div class="md:mb-4 mb-2">
-          <a
-            class="group peer relative block w-full focus:outline-none"
-            href="/blog/post/utiliza-pattern-matching-en-tu-codigo-typescript"
-            ><div
-              class="aspect-w-2 aspect-h-1 h-1/4 rounded-lg transition group-hover:ring-2 dark:ring-yellow-50 ring-green-400 ring-offset-2"
-            >
-              <img
-                alt="Utiliza Pattern Matching En Tu Código Typescript: ts-pattern"
-                class="rounded-lg object-cover cld-responsive"
-                data-src="https://res.cloudinary.com/matiasfha/image/upload/f_auto,q_auto/124138cd725f3f40f4f366d44a26def1a4ae7d1f-2560x1440.jpg"
-                src="https://res.cloudinary.com/matiasfha/image/upload/f_auto,q_auto/124138cd725f3f40f4f366d44a26def1a4ae7d1f-2560x1440.jpg"
-                height="173"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div
-              class="mt-8 dark:text-gray-300 text-gray-500 text-md font-medium lowercase text-body"
-            >
-              alrededor de <time datetime="2023-04-26T22:42:06.000Z"
-                >hace 1 día</time>
-            </div>
-            <span
-              class="mt-8 dark:text-gray-300 text-gray-500 text-sm italic lowercase text-body"
-              >tiempo de lectura 6 min read</span
-            >
-            <h2
-              class="md:text-2xl text-xl font-bold leading-tighter text-black dark:text-white"
-            >
-              Utiliza Pattern Matching En Tu Código Typescript: ts-pattern
-            </h2></a>
-        </div>
-      </div>
-      <div class="flex flex-col">
-        <div class="md:mb-4 mb-2">
-          <a
-            class="group peer relative block w-full focus:outline-none"
-            href="/blog/post/tipos-condicionales-pattern-matching-typescript"
-            ><div
-              class="aspect-w-2 aspect-h-1 h-1/4 rounded-lg transition group-hover:ring-2 dark:ring-yellow-50 ring-green-400 ring-offset-2"
-            >
-              <img
-                alt="Utiliza Tipos Condicionales Para Crear Algoritmos en Nivel de Tipo"
-                class="rounded-lg object-cover cld-responsive"
-                data-src="https://res.cloudinary.com/matiasfha/image/upload/v1680287900/3847-1680287165482-thumbnail_iapihy.jpg"
-                src="https://res.cloudinary.com/matiasfha/image/upload/v1680287900/3847-1680287165482-thumbnail_iapihy.jpg"
-                height="173"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div
-              class="mt-8 dark:text-gray-300 text-gray-500 text-md font-medium lowercase text-body"
-            >
-              alrededor de <time datetime="2023-03-30T18:41:36.000Z"
-                >hace 29 días</time>
-            </div>
-            <span
-              class="mt-8 dark:text-gray-300 text-gray-500 text-sm italic lowercase text-body"
-              >tiempo de lectura 3 min read</span
-            >
-            <h2
-              class="md:text-2xl text-xl font-bold leading-tighter text-black dark:text-white"
-            >
-              Utiliza Tipos Condicionales Para Crear Algoritmos en Nivel de Tipo
-            </h2></a>
-        </div>
-      </div>
-      <div class="flex flex-col">
-        <div class="md:mb-4 mb-2">
-          <a
-            class="group peer relative block w-full focus:outline-none"
-            href="/blog/post/typescript-usar-comentarios-como-anotaciones-de-tipo-con-jsdoc"
-            ><div
-              class="aspect-w-2 aspect-h-1 h-1/4 rounded-lg transition group-hover:ring-2 dark:ring-yellow-50 ring-green-400 ring-offset-2"
-            >
-              <img
-                alt="Typescript: usar comentarios como anotaciones de tipo con JSDoc"
-                class="rounded-lg object-cover cld-responsive"
-                data-src="https://res.cloudinary.com/matiasfha/image/upload/f_auto,q_auto/6de6e90fb46f5e66d48a97a064b6440894a7fd61-1280x710.jpg"
-                src="https://res.cloudinary.com/matiasfha/image/upload/f_auto,q_auto/6de6e90fb46f5e66d48a97a064b6440894a7fd61-1280x710.jpg"
-                height="173"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div
-              class="mt-8 dark:text-gray-300 text-gray-500 text-md font-medium lowercase text-body"
-            >
-              alrededor de <time datetime="2023-01-15T11:44:44.000Z"
-                >hace 3 meses</time>
-            </div>
-            <span
-              class="mt-8 dark:text-gray-300 text-gray-500 text-sm italic lowercase text-body"
-              >tiempo de lectura 4 min read</span
-            >
-            <h2
-              class="md:text-2xl text-xl font-bold leading-tighter text-black dark:text-white"
-            >
-              Typescript: usar comentarios como anotaciones de tipo con JSDoc
-            </h2></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div>
-    <div class="flex flex-col gap-2 mt-14 mb-14 justify-center">
-      <div class="flex flex-col items-center py-8 text-center">
-        <h3 class="max-w-md pt-2 text-xl text-blue-200 opacity-90">
-          Comienza el curso gratuito suscribiendote ahora.
-        </h3>
-      </div>
-      <form
-        data-sr-convertkit-subscribe-form=""
-        class="w-full mx-auto max-w-prose pt-2"
-      >
-        <div data-sr-input-wrapper="true">
-          <label
-            data-sr-input-label="true"
-            for="first_name"
-            class="absolute w-1 h-1 p-0 -m-1 overflow-hidden whitespace-nowrap border-0"
-            >First Name</label
-          ><input
-            data-sr-input="true"
-            name="first_name"
-            id="first_name"
-            placeholder="Preferred name"
-            type="text"
-            class="backdrop-blur w-full mb-1 rounded bg-gray-800 py-4 px-4 font-normal shadow-md"
-          />
-        </div><div data-sr-input-wrapper="true">
-          <label data-sr-input-label="true" for="email"
-            >Email<abbr title="required" data-sr-input-asterisk="true">*</abbr
-            ></label
-          ><input
-            data-sr-input="true"
-            name="email"
-            id="email"
-            placeholder="you@example.com"
-            type="email"
-            class="backdrop-blur w-full mb-1 rounded bg-gray-800 py-4 px-4 font-normal shadow-md"
-            required=""
-          />
-        </div>
-
-        <button
-          data-sr-button="true"
-          class="relative flex items-center justify-center overflow-hidden my-1 w-full rounded-md p-4 mt-4 font-medium text-xl text-gray-100 shadow-md bg-gradient-to-r from-fuchsia-400 to-blue-700"
-          type="submit"
-          ><span class="relative z-10">Comienza hoy</span><div
-            aria-hidden="true"
-            class="absolute top-0 left-0 items-center justify-center w-full h-full space-x-1 tracking-wide uppercase bg-white pointer-events-none bg-opacity-10 bg-blend-overlay"
-            style="background: linear-gradient(to right, rgba(132, 171, 255, 0) 100%, rgb(132, 171, 255) 200%, rgba(132, 171, 255, 0) 200%);"
-          >
-          </div>
-        </button>
-      </form>
-    </div>
-  </div>
+ <!-- <Features2 />-->
+ <!-- About me --> 
+  <About />
+  <Form />
   <Testimonials />
   <FAQ client:load />
   <Footer />

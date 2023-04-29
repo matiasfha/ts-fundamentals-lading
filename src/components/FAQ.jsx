@@ -5,7 +5,7 @@ const FAQData = [
   {
     question: "¿Cuánto cuesta el curso?",
     answer:
-      "El curso es completamente gratuito. Sin embargo, si deseas apoyar el curso y su continuo desarrollo, puedes invitarnos a un café en <a href=\"https://buymeacoffee.com/matiasfha\">BuyMeACoffee</a>",
+      'El curso es completamente gratuito. Sin embargo, si deseas apoyar el curso y su continuo desarrollo, puedes invitarnos a un café en <a href="https://buymeacoffee.com/matiasfha">BuyMeACoffee</a>',
   },
   {
     question: "¿Qué es Typescript?",
@@ -36,7 +36,7 @@ const FAQData = [
 ];
 
 export const FAQ = () => (
-  <section className="relative pt-16 pb-16 bg-blueGray-50 overflow-hidden">
+  <section className="relative pt-16 pb-16 bg-revolver-600 overflow-hidden">
     <div className="absolute -top-10" id="FAQ" />
     <motion.div
       initial={{ opacity: 0 }}
@@ -75,7 +75,7 @@ const FAQBox = ({ defaultOpen, title, content }) => {
 
   return (
     <div
-      className="pt-2 sm:pt-6 pb-2 px-3 sm:px-8  rounded-3xl bg-customDarkBg3 custom-border-gray-darker mb-4 relative hover:bg-customDarkBg3Hover cursor-pointer"
+      className="pt-2 sm:pt-6 pb-2 px-3 sm:px-8  rounded-3xl bg-revolver-800 custom-border-gray-darker mb-4 relative hover:bg-revolver-900 cursor-pointer"
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="flex flex-col p-2  justify-center items-start">
@@ -85,9 +85,8 @@ const FAQBox = ({ defaultOpen, title, content }) => {
         <p
           className={`text-customGrayText pt-4 transition-all duration-300 overflow-hidden ${isOpen ? "max-h-96" : "max-h-0"
             }`}
-        >
-          {content}
-        </p>
+          dangerouslySetInnerHTML={{ __html: content }}
+        ></p>
       </div>
       <div className="absolute top-6 right-4 sm:top-8 sm:right-8">
         <svg
