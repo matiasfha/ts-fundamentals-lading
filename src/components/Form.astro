@@ -8,8 +8,7 @@
         method: "POST",
         body: formData,
       });
-      const data = await response.json();
-      console.log(data)
+      await response.json();
       window.location.href="/thanks"
     } catch (e) {
       console.error(e);
@@ -17,7 +16,7 @@
     }
   });
 </script>
-<div class="flex flex-col gap-2 mt-14 mb-14 justify-center">
+<div class="flex flex-col gap-2 mt-14 mb-14 justify-center prose prose-lg px-4 mx-auto">
   <div class="flex flex-col items-center py-8 text-center">
     <h3 class="max-w-md pt-2 text-xl text-blue-200 opacity-90">
       Comienza el curso gratuito suscribiendote ahora.
@@ -40,6 +39,7 @@
       />
     </div><div data-sr-input-wrapper="true">
       <label data-sr-input-label="true" for="email"
+        class="absolute w-1 h-4 overflow-hidden whitespace-nowrap border-0"
         >Email<abbr title="required" data-sr-input-asterisk="true">*</abbr
         ></label
       ><input
@@ -48,7 +48,7 @@
         id="email"
         placeholder="tunombre@example.com"
         type="email"
-        class="backdrop-blur w-full mb-1 rounded bg-revolver-700 py-4 px-4 font-normal shadow-md text-gray-100"
+        class="backdrop-blur w-full mt-2 rounded bg-revolver-700 py-4 px-4 font-normal shadow-md text-gray-100"
         required=""
       />
     </div>
